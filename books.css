@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    font-size: 22px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-right: auto;
+    color: #333;
+}
+
+.navbar nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #3333ff;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #e0e9ff, #ffffff);
+    color: rgb(17, 17, 17);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* Year Header */
+.year-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 5rem 1rem 5%;
+    color: #3333ff;
+}
+
+/* Book Row */
+.book-row {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    padding: 1rem;
+    margin: 0 5% 1rem 5%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.book-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.book-row img {
+    width: 120px;
+    height: auto;
+    margin-right: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.book-row:hover img {
+    transform: scale(1.05);
+}
+
+.book-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #0c0c0c;
+}
+
+.book-content p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #0e0d0d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .book-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .book-row img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100px;
+    }
+    .book-content h3 {
+        font-size: 1.2rem;
+    }
+}
